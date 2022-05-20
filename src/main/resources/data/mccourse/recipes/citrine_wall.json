@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:citrine_block"
+    }
+  },
+  "result": {
+    "item": "mccourse:citrine_wall",
+    "count": 6
+  }
+}

@@ -4,6 +4,10 @@
     "mccourse:citrine_ore",
     "mccourse:citrine_block",
     "mccourse:deepslate_citrine_ore",
-    "mccourse:endstone_citrine_ore"
+    "mccourse:endstone_citrine_ore",
+    "mccourse:citrine_stairs",
+    "mccourse:citrine_slab",
+    "mccourse:citrine_button",
+    "mccourse:citrine_pressure_plate"
   ]
 }
