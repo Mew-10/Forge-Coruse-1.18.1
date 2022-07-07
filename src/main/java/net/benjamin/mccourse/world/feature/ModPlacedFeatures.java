@@ -21,4 +21,16 @@ public class ModPlacedFeatures {
             ModConfiguredFeature.CITRINE_ORE, ModOrePlacement
                     .commonOrePlacement(MCCourseCommonConfigs.CITRINE_ORE_VEINS_PER_CHUNK.get(), // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> EBONY_PLACED = PlacementUtils.register("ebony_placed",
+            ModConfiguredFeature.EBONY_SPAWN, VegetationPlacements.treePlacement(
+                    PlacementUtils.countExtra(3, 0.1f, 2)));
+
+    public static final Holder<PlacedFeature> END_CITRINE_ORE_PLACED = PlacementUtils.register("end_citrine_ore_placed",
+            ModConfiguredFeature.END_CITRINE_ORE, ModOrePlacement.commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> NETHER_CITRINE_ORE_PLACED = PlacementUtils.register("nether_citrine_ore_placed",
+            ModConfiguredFeature.NETHER_CITRINE_ORE, ModOrePlacement.commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 }

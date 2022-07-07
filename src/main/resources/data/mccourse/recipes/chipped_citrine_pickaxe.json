@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mccourse:citrine_pickaxe"
+    },
+    {
+      "item": "mccourse:chipped_citrine"
+    }
+  ],
+  "result": {
+    "item": "mccourse:chipped_citrine_pickaxe"
+  }
+}

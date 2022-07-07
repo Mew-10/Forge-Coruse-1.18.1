@@ -6,6 +6,8 @@ import net.benjamin.mccourse.entity.custom.RaccoonEntity;
 import net.benjamin.mccourse.entity.custom.TigerEntity;
 import net.benjamin.mccourse.event.loot.DataTabletAdditionModifier;
 import net.benjamin.mccourse.event.loot.DowsingRodInIglooAdditionModifier;
+import net.benjamin.mccourse.recipe.GemCuttingStationRecipe;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -34,5 +36,9 @@ public class ModEventBusEvents {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
         event.put(ModEntityTypes.TIGER.get(), TigerEntity.setAttributes());
+    }
+    @SubscribeEvent
+    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
+        Registry.register(Registry.RECIPE_TYPE, GemCuttingStationRecipe.Type.ID, GemCuttingStationRecipe.Type.INSTANCE);
     }
     }

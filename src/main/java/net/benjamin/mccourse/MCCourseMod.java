@@ -13,11 +13,13 @@ import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.painting.ModPaintings;
 import net.benjamin.mccourse.potion.ModPotions;
+import net.benjamin.mccourse.recipe.ModRecipes;
 import net.benjamin.mccourse.screen.GemCuttingStationScreen;
 import net.benjamin.mccourse.screen.ModMenuTypes;
 import net.benjamin.mccourse.sound.ModSounds;
 import net.benjamin.mccourse.util.ModItemProperties;
 import net.benjamin.mccourse.villager.ModVillagers;
+import net.benjamin.mccourse.world.dimension.ModDimensions;
 import net.benjamin.mccourse.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -63,6 +65,8 @@ public class MCCourseMod
         ModEntityTypes.register(eventbus);
         ModVillagers.register(eventbus);
         ModStructures.register(eventbus);
+        ModDimensions.register();
+        ModRecipes.register(eventbus);
 
 
         GeckoLib.initialize();

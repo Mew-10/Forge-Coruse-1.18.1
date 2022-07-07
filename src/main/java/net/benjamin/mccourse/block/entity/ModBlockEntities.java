@@ -2,6 +2,7 @@ package net.benjamin.mccourse.block.entity;
 
 import net.benjamin.mccourse.MCCourseMod;
 import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.block.entity.custom.AnimatedBlockEntity;
 import net.benjamin.mccourse.block.entity.custom.GemCuttingStationBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,11 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("gem_cutting_station_block_entity", () ->
                     BlockEntityType.Builder.of(GemCuttingStationBlockEntity::new,
                             ModBlocks.GEM_CUTTING_STATION.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AnimatedBlockEntity>> ANIMATED_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("animated_block_entity", () ->
+                    BlockEntityType.Builder.of(AnimatedBlockEntity::new,
+                            ModBlocks.ANIMATED_BLOCK.get()).build(null));
 
 
 

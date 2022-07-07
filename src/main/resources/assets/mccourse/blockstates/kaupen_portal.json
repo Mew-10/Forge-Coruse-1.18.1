@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z": { "model": "mccourse:block/kaupen_portal_ew" },
+    "axis=x": { "model": "mccourse:block/kaupen_portal_ns" }
+  }
+}

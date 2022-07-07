@@ -1,0 +1,11 @@
+{
+  "type": "mccourse:gem_cutting",
+  "ingredients": [
+    {
+      "item": "mccourse:citrine"
+    }
+  ],
+  "output": {
+    "item": "mccourse:chipped_citrine"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "item.mccourse.citrine": "Citrine",
   "item.mccourse.raw_citrine": "Raw Citrine",
-  "item.mccourse.coal_silver": "Coal Siver",
+  "item.mccourse.coal_silver": "Coal Sliver",
   "item.mccourse.chipped_citrine": "Chipped Citrine",
   "item.mccourse.citrine_axe": "Citrine Axe",
   "item.mccourse.citrine_sword": "Citrine Sword",
@@ -33,11 +33,18 @@
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
   "item.mccourse.citrine_paxel": "Citrine Paxel",
+  "item.mccourse.chipped_citrine_axe": "Chipped Citrine Axe",
+  "item.mccourse.chipped_citrine_sword": "Chipped Citrine Sword",
+  "item.mccourse.chipped_citrine_pickaxe": "Chipped Citrine Pickaxe",
+  "item.mccourse.chipped_citrine_hoe": "Chipped Citrine Hoe",
+  "item.mccourse.chipped_citrine_shovel": "Chipped Citrine Shovel",
 
   "item.mccourse.raccoon_spawn_egg": "Raccoon Spawn Egg",
   "item.mccourse.tiger_spawn_egg": "Tiger Spawn Egg",
 
+  "entity.mccourse.tiger": "Tiger",
   "entity.minecraft.villager.mccourse.gemmaster": "Gem Cutting Master",
+  "block.mccourse.citrine_lamp": "Citrine Lamp",
 
   "block.mccourse.citrine_block": "Citrine Block",
   "block.mccourse.citrine_ore": "Citrine Ore",
@@ -64,6 +71,14 @@
   "block.mccourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
   "block.mccourse.pink_rose": "Pink Rose",
   "block.mccourse.potted_pink_rose": "Potted Pink Rose",
+
+  "block.mccourse.ebony_log": "Ebony Log",
+  "block.mccourse.ebony_planks": "Ebony Planks",
+  "block.mccourse.ebony_wood": "Ebony Wood",
+  "block.mccourse.stripped_ebony_log": "Stripped Ebony Log",
+  "block.mccourse.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.mccourse.ebony_leaves": "Ebony Leaves",
+  "block.mccourse.ebony_sapling": "Ebony Sapling",
 
 
 

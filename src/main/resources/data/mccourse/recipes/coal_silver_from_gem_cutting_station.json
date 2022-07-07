@@ -1,0 +1,12 @@
+{
+  "type": "mccourse:gem_cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "item": "mccourse:coal_silver",
+    "count": 15
+  }
+}

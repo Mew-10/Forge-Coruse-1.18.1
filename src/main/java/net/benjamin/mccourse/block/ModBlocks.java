@@ -5,6 +5,7 @@ import net.benjamin.mccourse.block.custom.*;
 import net.benjamin.mccourse.item.ModCreativeModeTabs;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.world.feature.tree.CherryBlossomTreeGrower;
+import net.benjamin.mccourse.world.feature.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffects;
@@ -40,6 +41,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), ModCreativeModeTabs.MCMOD_TAB);
 
     public static final RegistryObject<Block> ENDSTONE_CITRINE_ORE = registerBlock("endstone_citrine_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTabs.MCMOD_TAB);
+
+    public static final RegistryObject<Block> NETHERRACK_CITRINE_ORE = registerBlock("netherrack_citrine_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTabs.MCMOD_TAB);
 
@@ -156,6 +161,79 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
             () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+    public static final RegistryObject<Block> EBONY_LOG = registerBlock("ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            ModCreativeModeTabs.MCMOD_TAB);
+    public static final RegistryObject<Block> EBONY_WOOD = registerBlock("ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
+            ModCreativeModeTabs.MCMOD_TAB);
+    public static final RegistryObject<Block> STRIPPED_EBONY_LOG = registerBlock("stripped_ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
+            ModCreativeModeTabs.MCMOD_TAB);
+    public static final RegistryObject<Block> STRIPPED_EBONY_WOOD = registerBlock("stripped_ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
+            ModCreativeModeTabs.MCMOD_TAB);
+
+
+    public static final RegistryObject<Block> EBONY_PLANKS = registerBlock("ebony_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, ModCreativeModeTabs.MCMOD_TAB);
+
+
+    public static final RegistryObject<Block> EBONY_LEAVES = registerBlock("ebony_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeModeTabs.MCMOD_TAB);
+
+
+    public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
+            () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()),
+            ModCreativeModeTabs.MCMOD_TAB);
+
+    public static final RegistryObject<Block> KAUPEN_PORTAL = registerBlockWithoutBlockItem("kaupen_portal",
+            KJPortalBlock::new);
+
+    public static final RegistryObject<Block> CITRINE_LAMP = registerBlock("citrine_lamp",
+            () -> new CitrineLampBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f).requiresCorrectToolForDrops().lightLevel(
+                            (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)),
+            ModCreativeModeTabs.MCMOD_TAB);
+
+    public static final RegistryObject<Block> ANIMATED_BLOCK = registerBlockWithoutBlockItem("animated_block",
+            () -> new AnimatedBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
+
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

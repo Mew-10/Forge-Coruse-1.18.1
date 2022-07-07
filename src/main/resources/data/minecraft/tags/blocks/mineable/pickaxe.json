@@ -8,6 +8,10 @@
     "mccourse:citrine_stairs",
     "mccourse:citrine_slab",
     "mccourse:citrine_button",
-    "mccourse:citrine_pressure_plate"
+    "mccourse:citrine_pressure_plate",
+    "mccourse:citrine_fence",
+    "mccourse:citrine_fence_gate",
+    "mccourse:citrine_wall",
+    "mccourse:gem_cutting_station"
   ]
 }

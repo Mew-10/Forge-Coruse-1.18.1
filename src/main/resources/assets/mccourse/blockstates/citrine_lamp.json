@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "mccourse:block/citrine_lamp_off" },
+    "clicked=true": { "model": "mccourse:block/citrine_lamp_on" }
+  }
+}

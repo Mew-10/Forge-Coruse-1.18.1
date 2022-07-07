@@ -1,0 +1,11 @@
+{
+  "type": "mccourse:gem_cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "output": {
+    "item": "mccourse:dowsing_rod"
+  }
+}

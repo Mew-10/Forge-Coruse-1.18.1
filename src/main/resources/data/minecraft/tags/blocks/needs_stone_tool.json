@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-
+    "mccourse:cherry_blossom_log",
+    "mccourse:cherry_blossom_wood",
+    "mccourse:stripped_cherry_blossom_log",
+    "mccourse:stripped_cherry_blossom_wood",
+    "mccourse:cherry_blossom_planks",
+    "mccourse:cherry_blossom_door",
+    "mccourse:cherry_blossom_trapdoor",
+    "mccourse:turnip_crop"
   ]
 }

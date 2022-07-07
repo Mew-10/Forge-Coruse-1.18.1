@@ -23,6 +23,7 @@ public class ModTreeGeneration {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(ModPlacedFeatures.CHERRY_BLOSSOM_PLACED);
+            base.add(ModPlacedFeatures.EBONY_PLACED);
         }
     }
 }

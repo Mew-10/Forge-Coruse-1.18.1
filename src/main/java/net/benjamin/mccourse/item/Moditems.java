@@ -50,8 +50,7 @@ public class Moditems {
             () -> new HoeItem(ModTiers.CITRINE, 0, 0f,
                     new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
-    public static final RegistryObject<Item> CITRINE_STAFF = ITEMS.register("citrine_staff",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> CITRINE_STAFF = ITEMS.register("citrine_staff", CatalystItem::new);
 
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
             () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
@@ -127,6 +126,33 @@ public class Moditems {
 
     public static final RegistryObject<ForgeSpawnEggItem> TIGER_SPAWN_EGG = ITEMS.register("tiger_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.TIGER,0xfcb603, 0x242321,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> ANIMATED_ITEM = ITEMS.register("animated_item",
+            () -> new AnimatedItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CHIPPED_CITRINE_SWORD = ITEMS.register("chipped_citrine_sword",
+            () -> new LevitationSwordItem(ModTiers.CHIPPED_CITRINE, 4, 6f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CHIPPED_CITRINE_PICKAXE = ITEMS.register("chipped_citrine_pickaxe",
+            () -> new PickaxeItem(ModTiers.CHIPPED_CITRINE, 3, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CHIPPED_CITRINE_SHOVEL = ITEMS.register("chipped_citrine_shovel",
+            () -> new ShovelItem(ModTiers.CHIPPED_CITRINE, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CHIPPED_CITRINE_AXE = ITEMS.register("chipped_citrine_axe",
+            () -> new AxeItem(ModTiers.CHIPPED_CITRINE, 6, 2f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CHIPPED_CITRINE_HOE = ITEMS.register("chipped_citrine_hoe",
+            () -> new HoeItem(ModTiers.CHIPPED_CITRINE, 2, 2f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> ANIMATED_BLOCK_ITEM = ITEMS.register("animated_block",
+            () -> new AnimatedBlockItem(ModBlocks.ANIMATED_BLOCK.get(),
                     new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
 
