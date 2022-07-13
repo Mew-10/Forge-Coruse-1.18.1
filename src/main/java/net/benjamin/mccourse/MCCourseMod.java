@@ -1,6 +1,7 @@
 package net.benjamin.mccourse;
 
 import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.block.ModWoodTypes;
 import net.benjamin.mccourse.block.entity.ModBlockEntities;
 import net.benjamin.mccourse.config.MCCourseClientConfigs;
 import net.benjamin.mccourse.config.MCCourseCommonConfigs;
@@ -12,6 +13,7 @@ import net.benjamin.mccourse.entity.client.TigerRenderer;
 import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.painting.ModPaintings;
+import net.benjamin.mccourse.potion.BetterBrewingRecipe;
 import net.benjamin.mccourse.potion.ModPotions;
 import net.benjamin.mccourse.recipe.ModRecipes;
 import net.benjamin.mccourse.screen.GemCuttingStationScreen;
@@ -24,11 +26,17 @@ import net.benjamin.mccourse.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -49,6 +57,9 @@ public class MCCourseMod
     public static final String MOD_ID = "mccourse";
 
     public MCCourseMod() {
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                Moditems.DOWSING_ROD.get(), ModPotions.FREEZE_POTION.get()));
+
         // Register the setup method for modloading
         IEventBus eventbus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -104,6 +115,8 @@ public class MCCourseMod
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
         EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
 
+        WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
+
 
         ModItemProperties.addCustomItemProperties();
 
@@ -116,6 +129,9 @@ public class MCCourseMod
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
             ModVillagers.registerPOIs();
         });
+
+        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+        Sheets.addWoodType(ModWoodTypes.CHERRY_BLOSSOM);
     }
     }
 

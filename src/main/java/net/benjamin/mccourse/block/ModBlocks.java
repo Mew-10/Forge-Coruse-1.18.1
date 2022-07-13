@@ -230,6 +230,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> ANIMATED_BLOCK = registerBlockWithoutBlockItem("animated_block",
             () -> new AnimatedBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
 
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_SIGN = BLOCKS.register("cherry_blossom_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.CHERRY_BLOSSOM));
+
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_WALL_SIGN = BLOCKS.register("cherry_blossom_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.CHERRY_BLOSSOM));
+
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

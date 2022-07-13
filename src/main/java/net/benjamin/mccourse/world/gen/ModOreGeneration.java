@@ -20,6 +20,7 @@ public class ModOreGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
         base.add(ModPlacedFeatures.CITRINE_ORE_PLACED);
+        base.add(ModPlacedFeatures.CITRINE_GEODE_PLACED);
         if(event.getCategory() == Biome.BiomeCategory.THEEND) {
             base.add(ModPlacedFeatures.END_CITRINE_ORE_PLACED);
         }

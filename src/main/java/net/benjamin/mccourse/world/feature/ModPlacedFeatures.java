@@ -33,4 +33,10 @@ public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> NETHER_CITRINE_ORE_PLACED = PlacementUtils.register("nether_citrine_ore_placed",
             ModConfiguredFeature.NETHER_CITRINE_ORE, ModOrePlacement.commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> CITRINE_GEODE_PLACED = PlacementUtils.register("citrine_geode_placed",
+            ModConfiguredFeature.CITRINE_GEODE,
+            RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+            HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+            BiomeFilter.biome());
 }

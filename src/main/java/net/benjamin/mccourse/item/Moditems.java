@@ -155,6 +155,10 @@ public class Moditems {
             () -> new AnimatedBlockItem(ModBlocks.ANIMATED_BLOCK.get(),
                     new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_SIGN_ITEM = ITEMS.register("cherry_blossom_sign",
+            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(16),
+                    ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
+
 
 
     public static void register (IEventBus eventBus) {

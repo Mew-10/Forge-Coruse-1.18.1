@@ -4,6 +4,7 @@ import net.benjamin.mccourse.MCCourseMod;
 import net.benjamin.mccourse.block.ModBlocks;
 import net.benjamin.mccourse.block.entity.custom.AnimatedBlockEntity;
 import net.benjamin.mccourse.block.entity.custom.GemCuttingStationBlockEntity;
+import net.benjamin.mccourse.block.entity.custom.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +24,12 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("animated_block_entity", () ->
                     BlockEntityType.Builder.of(AnimatedBlockEntity::new,
                             ModBlocks.ANIMATED_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN_BLOCK_ENTITIES =
+            BLOCK_ENTITIES.register("sign_block_entity", () ->
+                    BlockEntityType.Builder.of(ModSignBlockEntity::new,
+                            ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get(),
+                            ModBlocks.CHERRY_BLOSSOM_SIGN.get()).build(null));
 
 
 
