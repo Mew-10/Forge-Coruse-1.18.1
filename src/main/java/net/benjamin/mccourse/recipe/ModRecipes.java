@@ -14,6 +14,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<GemCuttingStationRecipe>> GEM_CUTTING_SERIALIZER =
             SERIALIZERS.register("gem_cutting", () -> GemCuttingStationRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<BlacklosTableRecipe>> BLACKLOS_CRAFTING_SERIALIZER =
+            SERIALIZERS.register("blacklos_crafting", () -> BlacklosTableRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

@@ -264,6 +264,11 @@ public class ModBlocks {
             () -> new LiquidBlock(() -> ModFluids.SOAPY_WATER_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
                     .noCollission().strength(100f).noDrops()));
 
+    public static final RegistryObject<Block> BLACKLOS_TABLE = registerBlock("blacklos_table",
+            () -> new BlacklosTableBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTabs.MCMOD_TAB);
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

@@ -1,0 +1,37 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "mccourse:block/amethyst_block",
+		"3": "mccourse:block/firestone_block",
+		"4": "mccourse:block/titanium_block",
+		"particle": "mccourse:block/titanium_block"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.72, 0.73, 0.7]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.72, 0.73, 0.79]
+		},
+		"firstperson_righthand": {
+			"translation": [-2.5, 0, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [-2.25, 0, 0]
+		}
+	}
+}

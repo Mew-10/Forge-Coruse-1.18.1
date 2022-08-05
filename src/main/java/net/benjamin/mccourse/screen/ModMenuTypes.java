@@ -17,6 +17,10 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<GemCuttingStationMenu>> GEM_CUTTING_STATION_MENU =
             registerMenuType(GemCuttingStationMenu::new, "gem_cutting_station_menu");
 
+    public static final RegistryObject<MenuType<BlacklosTableMenu>> BLACKLOS_TABLE_MENU =
+            registerMenuType(BlacklosTableMenu::new, "blacklos_table_menu");
+
+
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                  String name) {

@@ -16,6 +16,7 @@ import net.benjamin.mccourse.painting.ModPaintings;
 import net.benjamin.mccourse.potion.BetterBrewingRecipe;
 import net.benjamin.mccourse.potion.ModPotions;
 import net.benjamin.mccourse.recipe.ModRecipes;
+import net.benjamin.mccourse.screen.BlacklosTableScreen;
 import net.benjamin.mccourse.screen.GemCuttingStationScreen;
 import net.benjamin.mccourse.screen.ModMenuTypes;
 import net.benjamin.mccourse.sound.ModSounds;
@@ -113,6 +114,7 @@ public class MCCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
         EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
+        MenuScreens.register(ModMenuTypes.BLACKLOS_TABLE_MENU.get(), BlacklosTableScreen::new);
 
         WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
 
