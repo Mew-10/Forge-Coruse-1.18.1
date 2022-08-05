@@ -2,7 +2,7 @@
   "type": "mccourse:gem_cutting",
   "ingredients": [
     {
-      "item": "mccourse:cherry_blossom_planks"
+      "item": "mccourse:block_of_coal"
     }
   ],
   "output": {

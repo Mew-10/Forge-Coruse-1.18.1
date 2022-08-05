@@ -1,5 +1,6 @@
 {
   "item.mccourse.citrine": "Citrine",
+  "item.mccourse.infused_citrine": "Infused Citrine",
   "item.mccourse.raw_citrine": "Raw Citrine",
   "item.mccourse.coal_silver": "Coal Sliver",
   "item.mccourse.chipped_citrine": "Chipped Citrine",
@@ -65,6 +66,7 @@
   "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
   "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom TrapDoor",
   "block.mccourse.gem_cutting_station": "Gem Cutting Station",
+  "block.mccourse.gem_infusing_station": "Gem Infusing Station",
   "block.mccourse.winter_window": "Winter Window",
   "block.mccourse.magic_amethyst": "Magic Amethyst",
   "block.mccourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
@@ -89,6 +91,7 @@
 
   "item.mccourse.turnip_seeds": "Turnip Seeds",
   "block.mccourse.turnip_crop": "Turnip Crop",
+  "item.mccourse.block_of_coal": "Slab Of Coal",
 
 
   "effect.mccourse.freeze": "Freeze Effect",

@@ -20,6 +20,9 @@ public class Moditems {
     public static final RegistryObject<Item> CITRINE = ITEMS.register("citrine",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
+    public static final RegistryObject<Item> INFUSED_CITRINE = ITEMS.register("infused_citrine",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
     public static final RegistryObject<Item> RAW_CITRINE = ITEMS.register("raw_citrine",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
@@ -158,6 +161,26 @@ public class Moditems {
     public static final RegistryObject<Item> CHERRY_BLOSSOM_SIGN_ITEM = ITEMS.register("cherry_blossom_sign",
             () -> new SignItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(16),
                     ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> CITRINE_SLIME_FLUID_BUCKET = ITEMS.register("citrine_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.CITRINE_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> ZIRCON_SLIME_FLUID_BUCKET = ITEMS.register("zircon_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.ZIRCON_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> DIAMOND_SLIME_FLUID_BUCKET = ITEMS.register("diamond_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.DIAMOND_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> EMERALD_SLIME_FLUID_BUCKET = ITEMS.register("emerald_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.EMERALD_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> TANZANITE_SLIME_FLUID_BUCKET = ITEMS.register("tanzanite_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.TANZANITE_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> BLACK_OPAL_SLIME_FLUID_BUCKET = ITEMS.register("black_opal_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.BLACK_OPAL_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> PINK_SLIME_PEARL_SLIME_FLUID_BUCKET = ITEMS.register("pink_slime_pearl_slime_fluid_bucket",
+            () -> new BucketItem(ModFluids.PINK_SLIME_PEARL_SLIME_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> SOAPY_WATER_FLUID_BUCKET = ITEMS.register("soapy_water_fluid_bucket",
+            () -> new BucketItem(ModFluids.SOAPY_WATER_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> BLOCK_OF_COAL = ITEMS.register("block_of_coal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
 
 

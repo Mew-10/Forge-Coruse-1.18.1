@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "## ",
+    "## ",
+    "## "
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:coal_silver"
+    }
+  },
+  "result": {
+    "item": "mccourse:block_of_coal",
+    "count": 1
+  }
+}

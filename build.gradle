@@ -160,7 +160,7 @@ repositories {
     //     dir 'libs'
     // }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-    maven {
+   maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
@@ -169,6 +169,15 @@ repositories {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.dev"
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url "https://maven.k-4u.nl/"
     }
 }
 
@@ -185,6 +194,8 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.196:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.196")
+
+    runtimeOnly fg.deobf("curse.maven:mekanism-268560:3743835")
 }
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency

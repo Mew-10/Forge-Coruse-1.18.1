@@ -3,14 +3,17 @@ import net.benjamin.mccourse.MCCourseMod;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.Tags;
 
 public class ModTags {
+
     public static class Blocks {
         public static final TagKey<Block> DOWSING_ROD_VALUABLES =
                 tag("dowsing_rod_valuables");
@@ -32,6 +35,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> CITRINE = forgeTag("gems/citrine");
         public static final TagKey<Item> COBALT_NUGGETS = forgeTag("nuggets/cobalt");
+        public static final TagKey<Item> CUT_GEMS = tag("gems/cut_gems");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(MCCourseMod.MOD_ID, name));
@@ -40,12 +44,25 @@ public class ModTags {
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }
-        public static class ConfiguredStructureFeatures {
-            public static final TagKey<ConfiguredStructureFeature<?, ?>> CUSTOM_STRUCTURE_TAG = tag("custom_structure_tag");
 
-            private static TagKey<ConfiguredStructureFeature<?, ?>> tag(String name) {
-                return TagKey.create(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY, new ResourceLocation(MCCourseMod.MOD_ID, name));
+            public static class ConfiguredStructureFeatures {
+                public static final TagKey<ConfiguredStructureFeature<?, ?>> CUSTOM_STRUCTURE_TAG = tag("custom_structure_tag");
+
+                private static TagKey<ConfiguredStructureFeature<?, ?>> tag(String name) {
+                    return TagKey.create(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY, new ResourceLocation(MCCourseMod.MOD_ID, name));
+                }
             }
         }
+
+    public static class Fluids {
+        public static final TagKey<Fluid> SLIME_FLUIDS = tag("slime_fluids");
+
+        private static TagKey<Fluid> tag(String name) {
+            return FluidTags.create(new ResourceLocation(MCCourseMod.MOD_ID, name));
+        }
+
+        private static TagKey<Fluid> forgeTag(String name) {
+            return FluidTags.create(new ResourceLocation("forge", name));
     }
+}
 }

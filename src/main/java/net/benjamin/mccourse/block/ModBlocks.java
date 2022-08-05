@@ -2,6 +2,7 @@ package net.benjamin.mccourse.block;
 
 import net.benjamin.mccourse.MCCourseMod;
 import net.benjamin.mccourse.block.custom.*;
+import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.ModCreativeModeTabs;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.world.feature.tree.CherryBlossomTreeGrower;
@@ -235,6 +236,33 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CHERRY_BLOSSOM_WALL_SIGN = BLOCKS.register("cherry_blossom_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.CHERRY_BLOSSOM));
+
+
+    public static final RegistryObject<LiquidBlock> CITRINE_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("citrine_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.CITRINE_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> ZIRCON_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("zircon_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.ZIRCON_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> DIAMOND_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("diamond_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.DIAMOND_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> EMERALD_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("emerald_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.EMERALD_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> TANZANITE_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("tanzanite_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.TANZANITE_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> BLACK_OPAL_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("black_opal_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.BLACK_OPAL_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+    public static final RegistryObject<LiquidBlock> PINK_SLIME_PEARL_SLIME_FLUID_BLOCK = registerBlockWithoutBlockItem("pink_slime_pearl_slime_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.PINK_SLIME_PEARL_SLIME_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+
+    public static final RegistryObject<LiquidBlock> SOAPY_WATER_BLOCK = registerBlockWithoutBlockItem("soapy_fluid_block",
+            () -> new LiquidBlock(() -> ModFluids.SOAPY_WATER_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

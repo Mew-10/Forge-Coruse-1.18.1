@@ -30,6 +30,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -57,8 +58,6 @@ public class MCCourseMod
     public static final String MOD_ID = "mccourse";
 
     public MCCourseMod() {
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                Moditems.DOWSING_ROD.get(), ModPotions.FREEZE_POTION.get()));
 
         // Register the setup method for modloading
         IEventBus eventbus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -132,6 +131,12 @@ public class MCCourseMod
 
         BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
         Sheets.addWoodType(ModWoodTypes.CHERRY_BLOSSOM);
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                Moditems.CITRINE.get(), ModPotions.FREEZE_POTION.get()));
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
     }
     }
 
