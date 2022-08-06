@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
   "pattern": [
     "## ",
     "## ",
@@ -12,7 +11,7 @@
     }
   },
   "result": {
-    "item": "mccourse:block_of_coal",
+    "item": "mccourse:slab_of_coal",
     "count": 1
   }
 }

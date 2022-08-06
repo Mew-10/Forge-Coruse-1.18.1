@@ -1,37 +1,134 @@
 {
 	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
 	"textures": {
-		"2": "mccourse:block/amethyst_block",
-		"3": "mccourse:block/firestone_block",
-		"4": "mccourse:block/titanium_block",
-		"particle": "mccourse:block/titanium_block"
+		"0": "mccourse:machines/blacklos_table",
+		"particle": "mccourse:machines/blacklos_table"
 	},
 	"elements": [
 		{
-			"from": [0, 0, 0],
-			"to": [16, 16, 16],
+			"name": "left_leg",
+			"from": [14, 0, 0],
+			"to": [16, 4, 2],
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#4"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#4"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+				"north": {"uv": [0, 8, 0.5, 9], "texture": "#0"},
+				"east": {"uv": [8, 0, 8.5, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 8, 1, 9], "texture": "#0"},
+				"west": {"uv": [1, 8, 1.5, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 5.5, 8, 5], "texture": "#0"},
+				"down": {"uv": [6, 8, 5.5, 8.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "right_leg",
+			"from": [0, 0, 0],
+			"to": [2, 4, 2],
+			"faces": {
+				"north": {"uv": [8, 1, 8.5, 2], "texture": "#0"},
+				"east": {"uv": [1.5, 8, 2, 9], "texture": "#0"},
+				"south": {"uv": [2, 8, 2.5, 9], "texture": "#0"},
+				"west": {"uv": [8, 2, 8.5, 3], "texture": "#0"},
+				"up": {"uv": [8.5, 6, 8, 5.5], "texture": "#0"},
+				"down": {"uv": [6.5, 8, 6, 8.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "right_back_leg",
+			"from": [0, 0, 14],
+			"to": [2, 4, 16],
+			"faces": {
+				"north": {"uv": [2.5, 8, 3, 9], "texture": "#0"},
+				"east": {"uv": [3, 8, 3.5, 9], "texture": "#0"},
+				"south": {"uv": [8, 3, 8.5, 4], "texture": "#0"},
+				"west": {"uv": [3.5, 8, 4, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 6.5, 8, 6], "texture": "#0"},
+				"down": {"uv": [7, 8, 6.5, 8.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "left_back_leg",
+			"from": [14, 0, 14],
+			"to": [16, 4, 16],
+			"faces": {
+				"north": {"uv": [4, 8, 4.5, 9], "texture": "#0"},
+				"east": {"uv": [8, 4, 8.5, 5], "texture": "#0"},
+				"south": {"uv": [4.5, 8, 5, 9], "texture": "#0"},
+				"west": {"uv": [5, 8, 5.5, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 7, 8, 6.5], "texture": "#0"},
+				"down": {"uv": [7.5, 8, 7, 8.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [0, 4, 0],
+			"to": [16, 12, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 3, 0]},
+			"faces": {
+				"north": {"uv": [4, 0, 8, 2], "texture": "#0"},
+				"east": {"uv": [4, 2, 8, 4], "texture": "#0"},
+				"south": {"uv": [4, 4, 8, 6], "texture": "#0"},
+				"west": {"uv": [4, 6, 8, 8], "texture": "#0"},
+				"up": {"uv": [4, 4, 0, 0], "texture": "#0"},
+				"down": {"uv": [4, 4, 0, 8], "texture": "#0"}
 			}
 		}
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"scale": [0.72, 0.73, 0.7]
+			"rotation": [47, 19, 0],
+			"translation": [0, 0, 0.5],
+			"scale": [0.275, 0.275, 0.275]
 		},
 		"thirdperson_lefthand": {
-			"scale": [0.72, 0.73, 0.79]
+			"rotation": [47, 19, 0],
+			"translation": [0, 0, 0.5],
+			"scale": [0.275, 0.275, 0.275]
 		},
 		"firstperson_righthand": {
-			"translation": [-2.5, 0, 0]
+			"translation": [0, 1.25, 0],
+			"scale": [0.75, 0.75, 0.75]
 		},
 		"firstperson_lefthand": {
-			"translation": [-2.25, 0, 0]
+			"translation": [0, 1.25, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"gui": {
+			"rotation": [25, -145, 0],
+			"translation": [0, 2.25, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"head": {
+			"translation": [0, 7, 0]
+		},
+		"fixed": {
+			"rotation": [-17, 52, 0],
+			"translation": [0, 2.25, -3.75],
+			"scale": [0.55, 0.55, 0.55]
 		}
-	}
+	},
+	"groups": [
+		{
+			"name": "gem_infusing_station",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "VoxelShapes",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [
+						{
+							"name": "table",
+							"origin": [11.5, 2.5, 5],
+							"color": 0,
+							"children": [0, 1, 2, 3, 4]
+						}
+					]
+				}
+			]
+		}
+	]
 }

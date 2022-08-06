@@ -72,7 +72,7 @@ public class BlacklosTableRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<BlacklosTableRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(MCCourseMod.MOD_ID,"cobalt_blasting");
+        public static final ResourceLocation ID = new ResourceLocation(MCCourseMod.MOD_ID,"blacklos_crafting");
 
         @Override
         public BlacklosTableRecipe fromJson(ResourceLocation id, JsonObject json) {

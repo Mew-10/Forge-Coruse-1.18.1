@@ -179,7 +179,7 @@ public class Moditems {
     public static final RegistryObject<Item> SOAPY_WATER_FLUID_BUCKET = ITEMS.register("soapy_water_fluid_bucket",
             () -> new BucketItem(ModFluids.SOAPY_WATER_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
 
-    public static final RegistryObject<Item> BLOCK_OF_COAL = ITEMS.register("block_of_coal",
+    public static final RegistryObject<Item> SLAB_OF_COAL = ITEMS.register("slab_of_coal",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
 
