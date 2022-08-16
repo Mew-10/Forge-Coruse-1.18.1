@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#M#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_block"
+    },
+    "M": {
+      "item": "mccourse:magic_dust"
+    }
+  },
+  "result": {
+    "item": "mccourse:magic_amethyst",
+    "count": 1
+  }
+}

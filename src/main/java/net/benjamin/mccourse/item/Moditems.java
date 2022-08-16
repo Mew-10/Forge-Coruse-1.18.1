@@ -180,7 +180,11 @@ public class Moditems {
             () -> new BucketItem(ModFluids.SOAPY_WATER_FLUID, new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> SLAB_OF_COAL = ITEMS.register("slab_of_coal",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+            () -> new SlabOfCoalItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CLIMER_BOOTS = ITEMS.register("climer_boots",
+            () -> new ModArmorItemClimer(ModArmorMaterials.CLIMER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
 
 

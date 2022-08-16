@@ -2,13 +2,13 @@
   "type": "mccourse:blacklos_crafting",
   "ingredients": [
     {
-      "item": "mccourse:citrine_block"
+      "item": "mccourse:cobalt_ingot"
     },
     {
-      "item": "minecraft:stick"
+      "item": "mccourse:citrine_hoe"
     }
   ],
   "output": {
-    "item": "mccourse:citrine_staff"
+    "item": "mccourse:cobalt_hoe"
   }
 }

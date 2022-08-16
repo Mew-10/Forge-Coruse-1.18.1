@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "PW"
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:citrine_axe"
+    },
+    "S": {
+      "item": "mccourse:citrine_shovel"
+    },
+    "P": {
+      "item": "mccourse:citrine_pickaxe"
+    },
+    "W": {
+      "item": "mccourse:citrine_sword"
+    }
+  },
+  "result": {
+    "item": "mccourse:citrine_paxel",
+    "count": 3
+  }
+}

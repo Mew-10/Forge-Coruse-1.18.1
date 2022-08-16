@@ -1,0 +1,14 @@
+{
+  "type": "mccourse:blacklos_crafting",
+  "ingredients": [
+    {
+      "item": "mccourse:cobalt_ingot"
+    },
+    {
+      "item": "mccourse:citrine_sword"
+    }
+  ],
+  "output": {
+    "item": "mccourse:cobalt_sword"
+  }
+}

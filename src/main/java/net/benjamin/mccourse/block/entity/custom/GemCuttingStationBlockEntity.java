@@ -48,6 +48,22 @@ public class GemCuttingStationBlockEntity extends BlockEntity implements MenuPro
     private int progress = 0;
     private int maxProgress = 72;
 
+    public ItemStack getRenderStack() {
+        ItemStack stack;
+
+        if(!itemHandler.getStackInSlot(3).isEmpty()) {
+            stack = itemHandler.getStackInSlot(3);
+        } else {
+            stack = itemHandler.getStackInSlot(1);
+        }
+
+        return stack;
+    }
+
+    public boolean hasGemCuttingTools() {
+        return this.itemHandler.getStackInSlot(2).getItem() == Moditems.GEM_CUTTER_TOOL.get();
+    }
+
     public GemCuttingStationBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.GEM_CUTTING_STATION_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
         this.data = new ContainerData() {
@@ -71,6 +87,7 @@ public class GemCuttingStationBlockEntity extends BlockEntity implements MenuPro
             }
         };
     }
+
 
     @Override
     public Component getDisplayName() {

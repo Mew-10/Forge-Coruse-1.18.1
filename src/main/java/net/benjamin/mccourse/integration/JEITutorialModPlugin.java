@@ -6,6 +6,7 @@ import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.benjamin.mccourse.MCCourseMod;
+import net.benjamin.mccourse.recipe.BlacklosTableRecipe;
 import net.benjamin.mccourse.recipe.GemCuttingStationRecipe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -32,5 +33,8 @@ public class JEITutorialModPlugin implements IModPlugin {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<GemCuttingStationRecipe> recipes = rm.getAllRecipesFor(GemCuttingStationRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(GemCuttingStationRecipeCategory.UID, GemCuttingStationRecipe.class), recipes);
+        RecipeManager rm1 = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
+        List<BlacklosTableRecipe> recipesf = rm1.getAllRecipesFor(BlacklosTableRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(BlacklosTableRecipeCategory.UID, BlacklosTableRecipe.class), recipesf);
     }
 }

@@ -18,6 +18,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
     CITRINE("citrine", 33, new int[]{3, 5, 7, 4}, 55,
             SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.5F, () -> {
         return Ingredient.of(Moditems.CITRINE.get());
+    }),
+
+    CLIMER("climer", 39, new int[]{3, 5, 7, 7}, 55,
+            SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.5F, () -> {
+        return Ingredient.of(Items.SLIME_BALL);
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
